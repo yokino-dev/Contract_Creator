@@ -1,5 +1,6 @@
-from docx import Document
-from docx.shared import Inches
+from docx import Document # classe principal para criação de Documento Word
+from docx.shared import Pt, Cm # Unidade de medida como (PT = tamanho da fonte) Cm = (Tamanho das margens)
+from docx.enum.text import WD_ALIGN_PARAGRAPH # Alinhamento de texto (Centro, esquerda, direita)
 
 document = Document()
 
