@@ -1,6 +1,7 @@
 from docx import Document # classe principal para criação de Documento Word
 from docx.shared import Pt, Cm # Unidade de medida como (PT = tamanho da fonte) Cm = (Tamanho das margens)
 from docx.enum.text import WD_ALIGN_PARAGRAPH # Alinhamento de texto (Centro, esquerda, direita)
+from docx.shared import Inches
 
 document = Document()
 
@@ -14,5 +15,11 @@ section.right_margin = Cm(2.5)
 
 # Setor de Margin do espaçamento da folha
 
+style = document.styles['Normal']
+font = style.font
+font.name = 'Times New roman'
+font.size = Pt(15)
+
+p = document.add_paragraph ("Teste")
 
 document.save("neo1.docx")
