@@ -3,11 +3,15 @@ from docx.shared import Inches
 
 document = Document()
 
+# Setor de Margin do espaçamento da folha
 
-document.add_heading("Titulo Centralizado", 0)
-p = document.add_paragraph("Teste de Paragrafo: 1")
+section = document.sections[0]
+section.top_margin = Cm(2)
+section.bottom_margin = Cm(2)
+section.left_margin = Cm(2.5)
+section.right_margin = Cm(2.5)
 
-p.add_run("Teste de Paragrafo: 2").italic = True
-document.add_picture("goku.png", width=Inches(1.25))
+# Setor de Margin do espaçamento da folha
 
-document.save("neo.docx")
+
+document.save("neo1.docx")
